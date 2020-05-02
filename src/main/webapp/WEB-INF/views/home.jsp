@@ -1,9 +1,5 @@
-<%
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:forEach items="${orderedValues}" var="val">
+        <li>${val}</li>
+</c:forEach>
 
- 	String[] values = request.getParameterValues("values");
-      for (int i = 0; i < values.length; ++i) {
-%>
-        <li><%= values[i] %></li>
-<%
-      }
-%>
